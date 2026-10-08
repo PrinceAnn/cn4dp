@@ -8,6 +8,10 @@
 
 本公开版本只提供代码与示例配置。**不包含 UK Biobank 真实数据、受试者标识、队列导出、真实数据拟合的统计量、研究模型权重、notebook 输出或原仓库 Git 历史。** Demo 完全通过随机数生成，结果仅用于检查流程是否可运行，不代表论文实验结果。
 
+## 数据获取与 UK Biobank 授权
+
+UK Biobank（UKB）数据需要通过 [UK Biobank 官方网站](https://www.ukbiobank.ac.uk/use-our-data/apply-for-access/)申请，并在获得授权后才能访问和使用，使用时应遵守官方的数据访问条件。因此，本仓库**仅提供合成 demo 数据**，不分发真实 UKB 数据。Demo 数据独立生成，不使用任何 UK Biobank 受试者数据。申请要求和当前访问流程请以官网说明为准。
+
 ## 快速运行
 
 使用 Python 3.10 或以上版本，demo 可在 CPU 上运行。

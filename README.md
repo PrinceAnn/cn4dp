@@ -8,6 +8,10 @@ CN4DP transfers information from longitudinal disease trajectories into imaging-
 
 This public release contains source code and configurations. All demo inputs are generated locally from independent random draws. **No UK Biobank participant data, participant identifiers, cohort exports, fitted statistics, trained research weights, notebook outputs, or original Git history are distributed.** The small synthetic demo checks the software pipeline; its metrics do not reproduce or validate the paper's findings.
 
+## Data availability and UK Biobank access
+
+UK Biobank (UKB) data require an approved access application through the [official UK Biobank website](https://www.ukbiobank.ac.uk/use-our-data/apply-for-access/). Researchers must obtain authorization before accessing or using the data and comply with UK Biobank's current access conditions. Accordingly, this repository provides **synthetic demo data only** and does not distribute real UKB data. The demo inputs are generated independently of any UK Biobank participant data. Please refer to the official website for current application requirements and access procedures.
+
 ## Quick start
 
 Use Python 3.10 or newer. A CPU is sufficient for the demo.
