@@ -1,0 +1,24 @@
+# Small CPU model for the synthetic demo. Paths are relative to Delphi/.
+out_dir = '../runs/demo/teacher'
+dataset = 'demo'
+device = 'cpu'
+dtype = 'float32'
+seed = 42
+batch_size = 16
+block_size = 16
+vocab_size = 0
+n_layer = 1
+n_head = 4
+n_embd = 24
+dropout = 0.0
+token_dropout = 0.0
+no_event_token_rate = 5
+max_iters = 20
+eval_interval = 10
+eval_iters = 2
+log_interval = 5
+learning_rate = 0.001
+decay_lr = False
+compile = False
+wandb_log = False
+always_save_checkpoint = True

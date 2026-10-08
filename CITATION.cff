@@ -1,0 +1,41 @@
+cff-version: 1.2.0
+message: "Please cite the accompanying paper when using this research code."
+title: "CN4DP: From Trajectories to Phenotypes"
+type: software
+repository-code: "https://github.com/PrinceAnn/cn4dp"
+url: "https://arxiv.org/abs/2605.11958"
+authors:
+  - family-names: Wang
+    given-names: Zian
+preferred-citation:
+  type: article
+  title: "From Trajectories to Phenotypes: Disease Progression as Structural Priors for Multi-organ Imaging Representation Learning"
+  journal: "arXiv"
+  year: 2026
+  doi: "10.48550/arXiv.2605.11958"
+  url: "https://arxiv.org/abs/2605.11958"
+  authors:
+    - family-names: Wang
+      given-names: Zian
+    - family-names: Lan
+      given-names: Lizhen
+    - family-names: Wang
+      given-names: Guangming
+    - family-names: Zhang
+      given-names: Haosen
+    - family-names: Xu
+      given-names: Minxuan
+    - family-names: Li
+      given-names: Qing
+    - family-names: He
+      given-names: Tianxing
+    - family-names: Yang
+      given-names: Mo
+    - family-names: Mao
+      given-names: Wenyue
+    - family-names: Zhang
+      given-names: Yajing
+    - family-names: Li
+      given-names: Yan
+    - family-names: Wang
+      given-names: Chengyan

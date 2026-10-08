@@ -1,0 +1,65 @@
+# Synthetic example; run from the repository root.
+out_dir: runs/demo/imputation
+phenotype_csv: data/demo/phenotypes_distill.csv
+eid_col: eid
+device: cpu
+dtype: float32
+seed: 42
+batch_size: 32
+num_workers: 0
+pin_memory: false
+train_ratio: 0.6
+val_ratio: 0.2
+encoder:
+  type: organ
+  aggregator: transformer
+  align_dim: 16
+  organ_embed_dim: 8
+  token_dim: 32
+  shared_hidden_dims:
+  - 32
+  dropout: 0.0
+  act: relu
+  nhead: 4
+  num_layers: 1
+  ff_mult: 2
+  transformer_dropout: 0.0
+lr: 0.001
+epochs: 2
+check_finite: true
+log_every: 1
+progress_bar: false
+teacher_mode: online_delphi
+delphi_ckpt_dir: runs/demo/teacher
+disease_onset_csv: data/demo/disease_onsets.csv
+basic_csv: data/demo/basic_info.csv
+delphi_labels_csv: Delphi/data/demo/labels.csv
+teacher_traj_mode: pre_imaging
+teacher_pooling: mean
+freeze_delphi: true
+block_size: 16
+append_query_token: true
+loss: mse
+contrastive:
+  temperature: 0.07
+  normalize: true
+  symmetric: true
+projector:
+  enabled: true
+  hidden_dims:
+  - 32
+save_every: 1
+cohort_csv: data/demo/imaging_cohort.csv
+use_trajectory: true
+trajectory_fusion: concat
+decoder_hidden_dims:
+- 32
+decoder_dropout: 0.0
+masking:
+  train_mode: random
+  train_rate: 0.2
+  eval_mode: random
+  eval_rate: 0.2
+pretrained:
+  ckpt_path: runs/demo/distill/best.pt
+  freeze_encoder: false

@@ -1,0 +1,50 @@
+# Synthetic example; run from the repository root.
+out_dir: runs/demo/trajectory
+phenotype_csv: data/demo/phenotypes_downstream.csv
+eid_col: eid
+device: cpu
+dtype: float32
+seed: 42
+batch_size: 32
+num_workers: 0
+pin_memory: false
+train_ratio: 0.6
+val_ratio: 0.2
+encoder:
+  type: organ
+  aggregator: transformer
+  align_dim: 16
+  organ_embed_dim: 8
+  token_dim: 32
+  shared_hidden_dims:
+  - 32
+  dropout: 0.0
+  act: relu
+  nhead: 4
+  num_layers: 1
+  ff_mult: 2
+  transformer_dropout: 0.0
+lr: 0.001
+epochs: 2
+check_finite: true
+log_every: 1
+progress_bar: false
+riskset_csv: data/demo/riskset.csv
+split_csv: data/demo/downstream_splits.csv
+label_col: label
+delta_time_col: delta_time
+cls_loss_weight: 1.0
+time_loss_weight: 1.0
+time_loss: smoothl1
+monitor: val/loss
+monitor_mode: min
+gradient_clip_val: 1.0
+disease_onset_csv: data/demo/disease_onsets.csv
+basic_csv: data/demo/basic_info.csv
+delphi_labels_csv: Delphi/data/demo/labels.csv
+delphi_ckpt_dir: runs/demo/teacher
+freeze_delphi: true
+block_size: 16
+append_query_token: true
+pooling: senet
+imaging_date_col: imaging_date
